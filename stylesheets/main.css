@@ -1,0 +1,340 @@
+/*@import "compass/reset";*/
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("../fonts/fontawesome-webfont.eot?v=4.5.0");
+  src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.5.0") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff2?v=4.5.0") format("woff2"), url("../fonts/fontawesome-webfont.woff?v=4.5.0") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.5.0") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.5.0#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Material Design Icons';
+  src: url("../fonts/materialdesignicons-webfont.eot?v=1.5.54");
+  src: url("../fonts/materialdesignicons-webfont.eot?#iefix&v=1.5.54") format("embedded-opentype"), url("../fonts/materialdesignicons-webfont.woff2?v=1.5.54") format("woff2"), url("../fonts/materialdesignicons-webfont.woff?v=1.5.54") format("woff"), url("../fonts/materialdesignicons-webfont.ttf?v=1.5.54") format("truetype"), url("../fonts/materialdesignicons-webfont.svg?v=1.5.54#materialdesigniconsregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Helveticaneue';
+  src: url("../fonts/helveticaneuecyr-light.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Helveticaneue';
+  src: url("../fonts/helveticaneuecyr-bold.otf");
+  font-weight: bold;
+  font-style: normal;
+}
+/* line 1, ../sass/_first-page.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 4, ../sass/_first-page.scss */
+body {
+  font-family: "Helveticaneue", Arial, sans-serif;
+  margin: 0;
+  background: #333;
+  /*position: relative;*/
+}
+
+/* line 11, ../sass/_first-page.scss */
+.wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* line 16, ../sass/_first-page.scss */
+.clear-fix::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+/* line 22, ../sass/_first-page.scss */
+.loading {
+  height: 5px;
+  width: 100%;
+  background: rgba(145, 151, 154, 0.7);
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  animation: loading 8s infinite linear;
+}
+
+/* line 32, ../sass/_first-page.scss */
+.d-n {
+  display: none;
+}
+
+/* line 36, ../sass/_first-page.scss */
+header {
+  position: relative;
+  z-index: 5;
+}
+/* line 40, ../sass/_first-page.scss */
+header .header-top {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 0 40px;
+}
+/* line 45, ../sass/_first-page.scss */
+header .header-info {
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.66);
+  font-size: 14px;
+  line-height: 40px;
+  margin: 0 10px;
+}
+/* line 52, ../sass/_first-page.scss */
+header .header-info::before {
+  content: '\F3F2';
+  display: block;
+  float: left;
+  font-family: 'Material Design Icons';
+  font-size: 1.3em;
+  margin-right: 5px;
+}
+/* line 62, ../sass/_first-page.scss */
+header .mail {
+  text-decoration: none;
+}
+/* line 65, ../sass/_first-page.scss */
+header .mail::before {
+  content: '\F1EE';
+}
+/* line 70, ../sass/_first-page.scss */
+header .social {
+  list-style: none;
+  float: right;
+  margin: 0;
+  padding: 0;
+}
+/* line 76, ../sass/_first-page.scss */
+header .social li {
+  float: left;
+}
+/* line 80, ../sass/_first-page.scss */
+header .social a {
+  color: rgba(255, 255, 255, 0.66);
+  text-decoration: none;
+}
+/* line 84, ../sass/_first-page.scss */
+header .social a:before {
+  content: '\f09a';
+  display: block;
+  font-family: 'FontAwesome';
+  font-size: 17px;
+  line-height: 40px;
+  width: 36px;
+  text-align: center;
+}
+/* line 97, ../sass/_first-page.scss */
+header .social .linkedin:before {
+  content: '\f0e1';
+}
+/* line 104, ../sass/_first-page.scss */
+header .social .xing:before {
+  content: '\f168';
+}
+/* line 110, ../sass/_first-page.scss */
+header .header-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+/* line 114, ../sass/_first-page.scss */
+header .header-bottom ul {
+  float: right;
+  list-style: none;
+  margin: 0 0 10px;
+  padding: 0;
+}
+/* line 121, ../sass/_first-page.scss */
+header .header-bottom li {
+  float: left;
+}
+/* line 125, ../sass/_first-page.scss */
+header .header-bottom a {
+  display: block;
+  line-height: 50px;
+  padding: 0 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 16px;
+  color: #fff;
+}
+
+/* line 137, ../sass/_first-page.scss */
+.button {
+  display: block;
+  width: 100px;
+  line-height: 100px;
+  background: rgba(0, 0, 0, 0.15);
+  position: absolute;
+  top: 50%;
+  color: #fff;
+  text-align: center;
+  font-size: 40px;
+  text-decoration: none;
+  z-index: 5;
+}
+/* line 150, ../sass/_first-page.scss */
+.button-right {
+  right: 0;
+}
+/* line 155, ../sass/_first-page.scss */
+.button:hover {
+  background: #fff;
+  color: #444;
+}
+/* line 160, ../sass/_first-page.scss */
+.button-left:hover ~ .prev-slide, .button-right:hover ~ .next-slide {
+  display: block;
+}
+
+/* line 166, ../sass/_first-page.scss */
+.z2 {
+  z-index: 2;
+}
+
+@keyframes first-slide {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slide-head-in {
+  from {
+    bottom: -200px;
+  }
+  to {
+    bottom: 50%;
+  }
+}
+@keyframes slide-head-out {
+  from {
+    bottom: 50%;
+  }
+  to {
+    bottom: 120%;
+  }
+}
+@keyframes second-slide {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes third-slide {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes loading {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+/* line 1, ../sass/_slides.scss */
+.slide {
+  z-index: 2;
+}
+
+/* line 6, ../sass/_slides.scss */
+.current-slide {
+  /* border: 5px red dashed; */
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /*background: url('http://proffibit.com/wp-content/uploads/main13.jpg') no-repeat 0 -130px;*/
+  /*background: url('../img/main13.jpg') no-repeat;*/
+  background-size: cover;
+}
+/* line 18, ../sass/_slides.scss */
+.current-slide + h2 {
+  width: 580px;
+  margin: 0 auto;
+  font-size: 50px;
+  line-height: 60px;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1px;
+  font-weight: bold;
+  position: absolute;
+  bottom: 50%;
+  margin-bottom: -90px;
+  left: 50%;
+  margin-left: -290px;
+  animation: slide-head-in 1s;
+  z-index: 2;
+}
+
+/* line 40, ../sass/_slides.scss */
+.head-out {
+  animation: slide-head-out 1s;
+  z-index: 5;
+}
+
+/* line 44, ../sass/_slides.scss */
+.first-slide {
+  background: url("../img/main13.jpg") no-repeat;
+  animation: first-slide 2s;
+}
+
+/* line 49, ../sass/_slides.scss */
+.second-slide {
+  background: url("../img/main2.jpg") no-repeat;
+  animation: second-slide 2s;
+}
+
+/* line 54, ../sass/_slides.scss */
+.third-slide {
+  background: url("../img/main12.jpg") no-repeat;
+  animation: third-slide 2s;
+}
+
+/* line 59, ../sass/_slides.scss */
+.prev-slide,
+.next-slide {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: absolute;
+  top: 50%;
+  right: 100px;
+  background-size: cover;
+  display: none;
+  animation: none;
+  z-index: 3;
+}
+/* line 72, ../sass/_slides.scss */
+.prev-slide + h2,
+.next-slide + h2 {
+  display: none;
+}
+
+/* line 77, ../sass/_slides.scss */
+.prev-slide {
+  left: 100px;
+}
+
+/* line 81, ../sass/_slides.scss */
+.new {
+  z-index: 1;
+  animation: none;
+}
