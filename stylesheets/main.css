@@ -35,7 +35,7 @@ body {
   font-family: "Helveticaneue", Arial, sans-serif;
   margin: 0;
   background: #333;
-  /*position: relative;*/
+  overflow: hidden;
 }
 
 /* line 11, ../sass/_first-page.scss */
@@ -178,20 +178,29 @@ header .header-bottom a {
   z-index: 5;
 }
 /* line 150, ../sass/_first-page.scss */
+.button::before {
+  content: '\F141';
+  font-family: 'Material Design Icons';
+}
+/* line 155, ../sass/_first-page.scss */
 .button-right {
   right: 0;
 }
-/* line 155, ../sass/_first-page.scss */
+/* line 158, ../sass/_first-page.scss */
+.button-right::before {
+  content: '\F142';
+}
+/* line 164, ../sass/_first-page.scss */
 .button:hover {
   background: #fff;
   color: #444;
 }
-/* line 160, ../sass/_first-page.scss */
+/* line 169, ../sass/_first-page.scss */
 .button-left:hover ~ .prev-slide, .button-right:hover ~ .next-slide {
   display: block;
 }
 
-/* line 166, ../sass/_first-page.scss */
+/* line 175, ../sass/_first-page.scss */
 .z2 {
   z-index: 2;
 }
@@ -260,11 +269,9 @@ header .header-bottom a {
   position: absolute;
   top: 0;
   left: 0;
-  /*background: url('http://proffibit.com/wp-content/uploads/main13.jpg') no-repeat 0 -130px;*/
-  /*background: url('../img/main13.jpg') no-repeat;*/
   background-size: cover;
 }
-/* line 18, ../sass/_slides.scss */
+/* line 16, ../sass/_slides.scss */
 .current-slide + h2 {
   width: 580px;
   margin: 0 auto;
@@ -284,31 +291,31 @@ header .header-bottom a {
   z-index: 2;
 }
 
-/* line 40, ../sass/_slides.scss */
+/* line 38, ../sass/_slides.scss */
 .head-out {
   animation: slide-head-out 1s;
   z-index: 5;
 }
 
-/* line 44, ../sass/_slides.scss */
+/* line 42, ../sass/_slides.scss */
 .first-slide {
   background: url("../img/main13.jpg") no-repeat;
   animation: first-slide 2s;
 }
 
-/* line 49, ../sass/_slides.scss */
+/* line 47, ../sass/_slides.scss */
 .second-slide {
   background: url("../img/main2.jpg") no-repeat;
   animation: second-slide 2s;
 }
 
-/* line 54, ../sass/_slides.scss */
+/* line 52, ../sass/_slides.scss */
 .third-slide {
   background: url("../img/main12.jpg") no-repeat;
   animation: third-slide 2s;
 }
 
-/* line 59, ../sass/_slides.scss */
+/* line 57, ../sass/_slides.scss */
 .prev-slide,
 .next-slide {
   width: 100px;
@@ -322,18 +329,18 @@ header .header-bottom a {
   animation: none;
   z-index: 3;
 }
-/* line 72, ../sass/_slides.scss */
+/* line 70, ../sass/_slides.scss */
 .prev-slide + h2,
 .next-slide + h2 {
   display: none;
 }
 
-/* line 77, ../sass/_slides.scss */
+/* line 75, ../sass/_slides.scss */
 .prev-slide {
   left: 100px;
 }
 
-/* line 81, ../sass/_slides.scss */
+/* line 79, ../sass/_slides.scss */
 .new {
   z-index: 1;
   animation: none;
