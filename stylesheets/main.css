@@ -289,6 +289,12 @@ header .header-bottom a {
 }
 
 /* line 29, ../sass/_slides.scss */
+.h0 {
+  height: 0 !important;
+  overflow: hidden;
+}
+
+/* line 34, ../sass/_slides.scss */
 h2 {
   width: 580px;
   margin: 0 auto;
@@ -300,39 +306,41 @@ h2 {
   letter-spacing: 1px;
   font-weight: bold;
   position: absolute;
-  bottom: 50%;
+  bottom: -200px;
   margin-bottom: -90px;
   left: 50%;
   margin-left: -290px;
+  z-index: 5;
 }
 
-/* line 46, ../sass/_slides.scss */
+/* line 52, ../sass/_slides.scss */
 h2.head-out {
   animation: slide-head-out 2s;
+  bottom: 50%;
 }
 
-/* line 51, ../sass/_slides.scss */
+/* line 58, ../sass/_slides.scss */
 .first-slide {
   background: url("../img/main13.jpg") no-repeat;
   background-size: cover;
   animation: first-slide 2s;
 }
 
-/* line 57, ../sass/_slides.scss */
+/* line 64, ../sass/_slides.scss */
 .second-slide {
   background: url("../img/main2.jpg") no-repeat;
   background-size: cover;
   animation: second-slide 2s;
 }
 
-/* line 63, ../sass/_slides.scss */
+/* line 70, ../sass/_slides.scss */
 .third-slide {
   background: url("../img/main12.jpg") no-repeat;
   background-size: cover;
   animation: third-slide 2s;
 }
 
-/* line 69, ../sass/_slides.scss */
+/* line 76, ../sass/_slides.scss */
 .prev-slide,
 .next-slide {
   width: 100px;
@@ -347,18 +355,18 @@ h2.head-out {
   z-index: 3;
 }
 
-/* line 83, ../sass/_slides.scss */
+/* line 90, ../sass/_slides.scss */
 .prev-slide + h2,
 .next-slide + h2 {
   animation: slide-head-out 2s;
 }
 
-/* line 88, ../sass/_slides.scss */
+/* line 95, ../sass/_slides.scss */
 .prev-slide {
   left: 100px;
 }
 
-/* line 92, ../sass/_slides.scss */
+/* line 99, ../sass/_slides.scss */
 .new {
   z-index: 1;
   animation: none;

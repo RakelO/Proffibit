@@ -1,4 +1,7 @@
 $(document).ready(function() {
+	setTimeout(function(arg){
+  $('.h0').removeClass('h0');
+ }, 700);
 
 	var $loading = $('.loading');
 	var $body = $(document.body);
