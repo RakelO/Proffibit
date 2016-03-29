@@ -225,6 +225,9 @@ header .header-bottom a {
   from {
     bottom: 50%;
   }
+  50% {
+    bottom: 120%;
+  }
   to {
     bottom: 120%;
   }
@@ -269,10 +272,24 @@ header .header-bottom a {
   position: absolute;
   top: 0;
   left: 0;
-  background-size: cover;
 }
-/* line 16, ../sass/_slides.scss */
+/* line 14, ../sass/_slides.scss */
 .current-slide + h2 {
+  animation: slide-head-in 1s;
+  bottom: 50%;
+}
+/* line 19, ../sass/_slides.scss */
+.current-slide + .left-head {
+  left: 30%;
+}
+/* line 23, ../sass/_slides.scss */
+.current-slide + .right-head {
+  width: 450px;
+  left: 75%;
+}
+
+/* line 29, ../sass/_slides.scss */
+h2 {
   width: 580px;
   margin: 0 auto;
   font-size: 50px;
@@ -287,35 +304,35 @@ header .header-bottom a {
   margin-bottom: -90px;
   left: 50%;
   margin-left: -290px;
-  animation: slide-head-in 1s;
-  z-index: 2;
 }
 
-/* line 38, ../sass/_slides.scss */
-.head-out {
-  animation: slide-head-out 1s;
-  z-index: 5;
+/* line 46, ../sass/_slides.scss */
+h2.head-out {
+  animation: slide-head-out 2s;
 }
 
-/* line 42, ../sass/_slides.scss */
+/* line 51, ../sass/_slides.scss */
 .first-slide {
   background: url("../img/main13.jpg") no-repeat;
+  background-size: cover;
   animation: first-slide 2s;
 }
 
-/* line 47, ../sass/_slides.scss */
+/* line 57, ../sass/_slides.scss */
 .second-slide {
   background: url("../img/main2.jpg") no-repeat;
+  background-size: cover;
   animation: second-slide 2s;
 }
 
-/* line 52, ../sass/_slides.scss */
+/* line 63, ../sass/_slides.scss */
 .third-slide {
   background: url("../img/main12.jpg") no-repeat;
+  background-size: cover;
   animation: third-slide 2s;
 }
 
-/* line 57, ../sass/_slides.scss */
+/* line 69, ../sass/_slides.scss */
 .prev-slide,
 .next-slide {
   width: 100px;
@@ -329,18 +346,19 @@ header .header-bottom a {
   animation: none;
   z-index: 3;
 }
-/* line 70, ../sass/_slides.scss */
+
+/* line 83, ../sass/_slides.scss */
 .prev-slide + h2,
 .next-slide + h2 {
-  display: none;
+  animation: slide-head-out 2s;
 }
 
-/* line 75, ../sass/_slides.scss */
+/* line 88, ../sass/_slides.scss */
 .prev-slide {
   left: 100px;
 }
 
-/* line 79, ../sass/_slides.scss */
+/* line 92, ../sass/_slides.scss */
 .new {
   z-index: 1;
   animation: none;
