@@ -167,7 +167,7 @@ header .header-bottom a {
 .button {
   display: block;
   width: 100px;
-  line-height: 100px;
+  line-height: 98px;
   background: rgba(0, 0, 0, 0.15);
   position: absolute;
   top: 50%;
