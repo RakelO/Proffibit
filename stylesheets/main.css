@@ -272,20 +272,19 @@ header .header-bottom a {
   position: absolute;
   top: 0;
   left: 0;
+  /* 	&+.left-head{
+  	left: 30%;
+  }
+  
+  &+.right-head{
+  	width: 450px;
+  	left: 75%;
+  } */
 }
 /* line 14, ../sass/_slides.scss */
 .current-slide + h2 {
   animation: slide-head-in 1s;
   bottom: 50%;
-}
-/* line 19, ../sass/_slides.scss */
-.current-slide + .left-head {
-  left: 30%;
-}
-/* line 23, ../sass/_slides.scss */
-.current-slide + .right-head {
-  width: 450px;
-  left: 75%;
 }
 
 /* line 29, ../sass/_slides.scss */
@@ -314,33 +313,44 @@ h2 {
 }
 
 /* line 52, ../sass/_slides.scss */
+.left-head {
+  left: 30%;
+}
+
+/* line 56, ../sass/_slides.scss */
+.right-head {
+  width: 450px;
+  left: 75%;
+}
+
+/* line 61, ../sass/_slides.scss */
 h2.head-out {
   animation: slide-head-out 2s;
   bottom: 50%;
 }
 
-/* line 58, ../sass/_slides.scss */
+/* line 67, ../sass/_slides.scss */
 .first-slide {
   background: url("../img/main13.jpg") no-repeat;
   background-size: cover;
   animation: first-slide 2s;
 }
 
-/* line 64, ../sass/_slides.scss */
+/* line 73, ../sass/_slides.scss */
 .second-slide {
   background: url("../img/main2.jpg") no-repeat;
   background-size: cover;
   animation: second-slide 2s;
 }
 
-/* line 70, ../sass/_slides.scss */
+/* line 79, ../sass/_slides.scss */
 .third-slide {
   background: url("../img/main12.jpg") no-repeat;
   background-size: cover;
   animation: third-slide 2s;
 }
 
-/* line 76, ../sass/_slides.scss */
+/* line 85, ../sass/_slides.scss */
 .prev-slide,
 .next-slide {
   width: 100px;
@@ -355,18 +365,18 @@ h2.head-out {
   z-index: 3;
 }
 
-/* line 90, ../sass/_slides.scss */
+/* line 99, ../sass/_slides.scss */
 .prev-slide + h2,
 .next-slide + h2 {
   animation: slide-head-out 2s;
 }
 
-/* line 95, ../sass/_slides.scss */
+/* line 104, ../sass/_slides.scss */
 .prev-slide {
   left: 100px;
 }
 
-/* line 99, ../sass/_slides.scss */
+/* line 108, ../sass/_slides.scss */
 .new {
   z-index: 1;
   animation: none;

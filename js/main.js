@@ -1,7 +1,7 @@
 $(document).ready(function() {
-	setTimeout(function(arg){
-  $('.h0').removeClass('h0');
- }, 700);
+	setTimeout(function(){
+		$('.h0').removeClass('h0');
+	}, 900);
 
 	var $loading = $('.loading');
 	var $body = $(document.body);
@@ -20,7 +20,7 @@ $(document).ready(function() {
 		$body.css('background-image', bg);
 		$loading.addClass('d-n');
 
-		if ($(e.target).hasClass('.button-left')){
+		if ($(e.target).hasClass('button-left')){
 				$current.addClass('next-slide').removeClass('current-slide');
 				$prev.addClass('current-slide').removeClass('prev-slide');
 				$next.addClass('prev-slide').removeClass('next-slide');

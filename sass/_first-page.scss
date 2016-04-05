@@ -1,0 +1,180 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	font-family: "Helveticaneue", Arial, sans-serif;
+	margin: 0;
+	background: #333;
+	overflow: hidden;
+}
+
+.wrap{
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.clear-fix::after{
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.loading{
+	height: 5px;
+	width: 100%;
+	background: rgba(145,151,154,0.7);
+	position: absolute;
+	top: 0;
+	z-index: 10;
+	animation: loading 8s infinite linear;
+}
+
+.d-n{
+	display: none;
+}
+
+header{
+	position: relative;
+	z-index: 5;
+
+	.header-top{
+		background-color: rgba(0,0,0,0.2);
+		padding: 0 40px;
+	}
+
+	.header-info{
+		display: inline-block;
+		color: rgba(255,255,255,0.66);
+		font-size: 14px;
+		line-height: 40px;
+		margin: 0 10px;
+
+		&::before{
+			content:'\F3F2';
+			display: block;
+			float: left;
+			font-family: 'Material Design Icons';
+			font-size: 1.3em;
+			margin-right: 5px;
+		}
+	}
+
+	.mail{
+		text-decoration: none;
+
+		&::before{
+			content:'\F1EE';
+		}
+	}
+
+	.social{
+		list-style: none;
+		float: right;
+		margin: 0;
+		padding: 0;
+
+		li{
+			float: left;
+		}
+
+		a{
+			color: rgba(255,255,255,0.66);
+			text-decoration: none;
+
+			&:before{
+				content: '\f09a';
+				display: block;
+				font-family: 'FontAwesome';
+				font-size: 17px;
+				line-height: 40px;
+				width: 36px;
+				text-align: center;
+			}
+		}
+
+		.linkedin{
+
+			&:before{
+				content:'\f0e1';
+			}
+		}
+
+		.xing{
+
+			&:before{
+				content:'\f168';
+			}
+		}
+	}
+
+	.header-bottom{
+		max-width: 1200px;
+		margin: 0 auto;
+
+		ul{
+			float: right;
+			list-style: none;
+			margin: 0 0 10px;
+			padding: 0;
+		}
+
+		li{
+			float: left;
+		}
+
+		a{
+			display: block;
+			line-height: 50px;
+			padding: 0 20px;
+			text-transform: uppercase;
+			text-decoration: none;
+			font-size: 16px;
+			color: #fff;
+		}
+	}
+}
+
+	.button{
+		display: block;
+		width: 100px;
+		line-height: 98px;
+		background: rgba(0,0,0,0.15);
+		position: absolute;
+		top: 50%;
+		color: #fff;
+		text-align: center;
+		font-size: 40px;
+		text-decoration: none;
+		z-index: 5;
+
+		&::before{
+			content: '\F141';
+			font-family: 'Material Design Icons';
+		}
+
+		&-right{
+			right: 0;
+
+			&::before{
+				content: '\F142';
+			}
+		}
+
+
+		&:hover{
+			background: #fff;
+			color: #444;
+		}
+
+		&-left:hover~.prev-slide,
+		&-right:hover~.next-slide{
+			display: block;
+		}
+	}
+
+.z2 {
+	z-index: 2;
+}
+
+
+
